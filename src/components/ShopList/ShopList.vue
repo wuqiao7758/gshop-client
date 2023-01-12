@@ -182,6 +182,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'ShopList',
   props: {
@@ -192,10 +193,10 @@ export default {
     }
   },
   computed: {
-
+    ...mapState(['shops'])
   },
   mounted() {
-
+    this.$store.dispatch('getCategorys')
   },
   methods: {
 
