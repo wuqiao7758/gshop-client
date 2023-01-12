@@ -7,11 +7,17 @@
 
 <script>
 import FooterGuide from './components/FooterGuide/FooterGuide.vue';
+import { reqFoodList } from './api';
 
 export default {
   name: 'App',
   components: {
     FooterGuide
+  },
+  mounted() {
+
+    this.$store.dispatch('getAddress')
+    this.$store.dispatch('getShops')
   }
 }
 </script>
