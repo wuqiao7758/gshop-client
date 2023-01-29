@@ -1,9 +1,10 @@
 import ajax from './ajax'
+
 // 1、根据经纬度获取位置详情
-export const reqAddress = geohash => ajax(`position/${geohash}`)
+export const reqAddress = geohash => ajax(`/position/${geohash}`)
 
 // 2、获取食品分类列表
-export const reqFoodList = () => ajax('/index_category')
+export const reqCategoryList = () => ajax('/index_category')
 
 // 3、根据经纬度获取商铺列表
 export const reqShopList = (longitude, latitude) => ajax('/shops', { longitude, latitude })
